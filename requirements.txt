@@ -7,3 +7,4 @@ SpeechRecognition
 gTTS
 pydub
 folium
+pillow
