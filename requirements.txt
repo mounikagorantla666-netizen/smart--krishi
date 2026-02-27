@@ -6,3 +6,4 @@ scikit-learn
 SpeechRecognition
 gTTS
 pydub
+folium
