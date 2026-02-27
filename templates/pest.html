@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pest Detection</title>
+</head>
+<body>
+<h2>AI Pest Detection</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Detect Pest</button>
+</form>
+
+{% if pest %}
+    <h3>Detected Pest: {{ pest }}</h3>
+    <h3>Recommended Pesticide: {{ pesticide }}</h3>
+{% endif %}
+
+<a href="/">Back to Dashboard</a>
+
+</body>
+</html>

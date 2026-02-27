@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Eligibility Checker</title>
+</head>
+<body>
+
+<h2>💰 Smart Krishi Financial Eligibility</h2>
+
+<form method="POST">
+
+    <label>Annual Income (₹):</label>
+    <input type="number" name="income" required><br><br>
+
+    <label>Land Size (acres):</label>
+    <input type="number" step="0.1" name="land" required><br><br>
+
+    <label>Credit Score:</label>
+    <input type="number" name="credit_score" required><br><br>
+
+    <label>Crop Type:</label>
+    <select name="crop">
+        <option>Rice</option>
+        <option>Wheat</option>
+        <option>Cotton</option>
+        <option>Maize</option>
+    </select><br><br>
+
+    <button type="submit">Check Eligibility</button>
+
+</form>
+
+{% if eligibility %}
+    <h3>{{ eligibility }}</h3>
+    <p><b>Recommended Loan Amount:</b> ₹{{ loan_amount }}</p>
+    <p><b>Subsidy Status:</b> {{ subsidy }}</p>
+{% endif %}
+
+</body>
+</html>

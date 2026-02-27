@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Krishi Voice Assistant</title>
+</head>
+<body>
+
+<h2>🎤 Smart Krishi Voice Assistant</h2>
+
+<form method="POST">
+    <label>Type your question (or simulate voice):</label>
+    <input type="text" name="command" required>
+    <button type="submit">Ask</button>
+</form>
+
+{% if response %}
+    <h3>Response: {{ response }}</h3>
+    <audio controls>
+        <source src="{{ url_for('static', filename=audio_file) }}" type="audio/mp3">
+    </audio>
+{% endif %}
+
+</body>
+</html>

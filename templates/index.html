@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Krishi</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<h1>🌾 Smart Krishi Dashboard</h1>
+
+<h2>Add Farmer</h2>
+<form id="farmerForm">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="location" placeholder="Location" required>
+    <input type="number" name="land_size" placeholder="Land Size (Acres)" required>
+    <button type="submit">Add Farmer</button>
+</form>
+
+<hr>
+
+<h2>Yield Prediction</h2>
+<input type="number" id="soil" placeholder="Soil Value">
+<input type="number" id="rainfall" placeholder="Rainfall">
+<button onclick="predictYield()">Predict Yield</button>
+
+<h3 id="result"></h3>
+
+<hr>
+  <h2>Crop Recommendation</h2>
+
+<input type="text" id="soil_type" placeholder="Soil Type (Black/Loamy/Sandy)">
+<input type="number" id="rainfall_crop" placeholder="Rainfall">
+<input type="number" id="temperature" placeholder="Temperature">
+
+<button onclick="recommendCrop()">Recommend Crop</button>
+
+<h3 id="crop_result"></h3>
+<hr>
+<br>
+
+<h2>Fertilizer Advisory</h2>
+<input type="number" id="nitrogen" placeholder="Nitrogen Level">
+<button onclick="fertilizerAdvice()">Get Advice</button>
+<h3 id="fertilizer_result"></h3>
+
+<hr>
+<a href="/pest_detection">AI Pest Detection</a>
+
+<a href="/dashboard">View Farmers</a>
+
+
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>

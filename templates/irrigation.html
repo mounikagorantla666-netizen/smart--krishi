@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Irrigation Advisor</title>
+</head>
+<body>
+
+<h2>🌾 Smart Irrigation Advisor</h2>
+
+<form method="POST">
+
+    <label>Soil Moisture (%):</label>
+    <input type="number" name="soil_moisture" required><br><br>
+
+    <label>Temperature (°C):</label>
+    <input type="number" name="temperature" required><br><br>
+
+    <label>Humidity (%):</label>
+    <input type="number" name="humidity" required><br><br>
+
+    <label>Crop Type:</label>
+    <select name="crop">
+        <option>Rice</option>
+        <option>Wheat</option>
+        <option>Maize</option>
+        <option>Cotton</option>
+    </select><br><br>
+
+    <label>Soil Type:</label>
+    <select name="soil_type">
+        <option>Loamy</option>
+        <option>Sandy</option>
+        <option>Clay</option>
+        <option>Black Soil</option>
+    </select><br><br>
+
+    <button type="submit">Check Irrigation Advice</button>
+
+</form>
+
+{% if result %}
+    <h3>{{ result }}</h3>
+{% endif %}
+
+</body>
+</html>

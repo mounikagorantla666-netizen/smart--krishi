@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmers Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<h1>Registered Farmers</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Land Size</th>
+    </tr>
+
+    {% for farmer in farmers %}
+    <tr>
+        <td>{{ farmer.id }}</td>
+        <td>{{ farmer.name }}</td>
+        <td>{{ farmer.location }}</td>
+        <td>{{ farmer.land_size }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+<a href="/">Back</a>
+
+</body>
+</html>

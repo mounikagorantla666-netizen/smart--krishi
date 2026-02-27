@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Health Analyzer</title>
+</head>
+<body>
+
+<h2>🌱 Soil Health Analyzer</h2>
+
+<form method="POST">
+
+    <label>Nitrogen (N):</label>
+    <input type="number" name="nitrogen" required><br><br>
+
+    <label>Phosphorus (P):</label>
+    <input type="number" name="phosphorus" required><br><br>
+
+    <label>Potassium (K):</label>
+    <input type="number" name="potassium" required><br><br>
+
+    <label>pH Value:</label>
+    <input type="number" step="0.1" name="ph" required><br><br>
+
+    <label>Soil Type:</label>
+    <select name="soil_type">
+        <option>Loamy</option>
+        <option>Sandy</option>
+        <option>Clay</option>
+        <option>Black Soil</option>
+    </select><br><br>
+
+    <button type="submit">Analyze Soil</button>
+
+</form>
+
+{% if health %}
+    <h3>{{ health }}</h3>
+    <p>{{ recommendation }}</p>
+{% endif %}
+
+</body>
+</html>

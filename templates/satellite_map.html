@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Satellite Crop Health Map</title>
+</head>
+<body>
+
+<h2>🛰 Satellite Crop Health Map (NDVI Based)</h2>
+
+<form method="POST">
+    <label>Latitude:</label>
+    <input type="number" step="0.0001" name="latitude" required><br><br>
+
+    <label>Longitude:</label>
+    <input type="number" step="0.0001" name="longitude" required><br><br>
+
+    <label>NDVI Value (0 - 1):</label>
+    <input type="number" step="0.01" name="ndvi" required><br><br>
+
+    <button type="submit">Generate Health Map</button>
+</form>
+
+{% if health_status %}
+    <h3>{{ health_status }}</h3>
+{% endif %}
+
+{% if map_generated %}
+    <iframe src="{{ url_for('static', filename='satellite_output.html') }}"></iframe>
+{% endif %}
+
+</body>
+</html>

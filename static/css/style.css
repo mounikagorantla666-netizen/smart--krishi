@@ -1,0 +1,35 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+    background-color: #f0f8ff;
+}
+
+h1 {
+    color: green;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
